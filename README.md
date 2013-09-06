@@ -1,5 +1,3 @@
-bower register css-recipe-media git://github.com/css-recipes/media.git
-
 # Media [![Build Status](https://secure.travis-ci.org/css-recipes/media.png?branch=master)](http://travis-ci.org/css-recipes/media)
 
 > Media queries shortcuts. Also include some predefined values.
