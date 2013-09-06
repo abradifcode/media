@@ -1,0 +1,53 @@
+<!doctype html>
+<link rel="stylesheet" href="index.css"/>
+
+<title>crp-Media</title>
+
+<p class="doc">
+    Resize this window to checkout the result, or view this page with different device (with iOS Simulator or Opera Mobile Emulator)
+    <br />
+    For width and height, to be able to use this mixins, you should choose how many screen size you're about to support.
+    <br />
+    Advice: Use media-min() for mobile first approch, media-max otherwise
+</p>
+
+<div class="crp-Media-min-width"></div>
+<div class="crp-Media-gap-width"></div>
+<div class="crp-Media-max-width"></div>
+
+<div class="crp-Media-min-height"></div>
+<div class="crp-Media-gap-height"></div>
+<div class="crp-Media-max-height"></div>
+
+<div class="crp-Media-orientation"></div>
+
+<div class="crp-Media-resolution"></div>
+<div class="crp-Media-pixel-ratio"></div>
+<div class="crp-Media-highres-shortcut"></div>
+
+<!-- media-queries-for-js -->
+<script>
+function getMediaQuery() {
+	return window.getComputedStyle(document.body,':after').getPropertyValue('content')
+}
+
+function logMediaQueriesName() {
+	console.log('getMediaQuery:' + getMediaQuery());
+	switch(getMediaQuery()) {
+		case 'small':
+			console.log("I'm so smalll");
+			break;
+
+		case 'medium':
+			console.log("My js name is 'medium'");
+			break;
+
+		case 'large':
+			console.log("King size duuude.");
+			break;
+	}
+}
+// be carefull of performance using "resize". You should use this with a different method. This is not my problem :p
+window.addEventListener('resize', logMediaQueriesName);
+logMediaQueriesName(); // call for first try :)
+</script>

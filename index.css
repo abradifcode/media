@@ -1,0 +1,118 @@
+div {
+  font-size: 2em; }
+
+.crp-Media-min-width:after {
+  content: 'Min width (for mobile first)'; }
+  @media (min-width: 20em) {
+    .crp-Media-min-width:after {
+      content: 'Min width 20em'; } }
+  @media (min-width: 40em) {
+    .crp-Media-min-width:after {
+      content: 'Min width 40em'; } }
+  @media (min-width: 60em) {
+    .crp-Media-min-width:after {
+      content: 'Min width 60em'; } }
+
+.crp-Media-gap-width:after {
+  content: 'Gap width (for precision)'; }
+  @media (min-width: 20em) and (max-width: 40em) {
+    .crp-Media-gap-width:after {
+      content: 'Gap width 20em -> 40em'; } }
+  @media (min-width: 40em) and (max-width: 60em) {
+    .crp-Media-gap-width:after {
+      content: 'Gap width 40em -> 60em'; } }
+
+.crp-Media-max-width:after {
+  content: 'Max width (for desktop first)'; }
+  @media (max-width: 60em) {
+    .crp-Media-max-width:after {
+      content: 'Max width 60em'; } }
+  @media (max-width: 40em) {
+    .crp-Media-max-width:after {
+      content: 'Max width 40em'; } }
+  @media (max-width: 20em) {
+    .crp-Media-max-width:after {
+      content: 'Max width 20em'; } }
+
+.crp-Media-min-height:after {
+  content: 'Min height'; }
+  @media (min-height: 10em) {
+    .crp-Media-min-height:after {
+      content: 'Min height 10em'; } }
+  @media (min-height: 20em) {
+    .crp-Media-min-height:after {
+      content: 'Min height 20em'; } }
+  @media (min-height: 30em) {
+    .crp-Media-min-height:after {
+      content: 'Min height 30em'; } }
+
+.crp-Media-gap-height:after {
+  content: 'Gap height (for precision)'; }
+  @media (min-width: 10em) and (max-width: 20em) {
+    .crp-Media-gap-height:after {
+      content: 'Gap height 10em -> 20em'; } }
+  @media (min-width: 20em) and (max-width: 30em) {
+    .crp-Media-gap-height:after {
+      content: 'Gap height 20em -> 30em'; } }
+
+.crp-Media-max-height:after {
+  content: 'Max height (for desktop first)'; }
+  @media (max-height: 30em) {
+    .crp-Media-max-height:after {
+      content: 'Max height 30em'; } }
+  @media (max-height: 20em) {
+    .crp-Media-max-height:after {
+      content: 'Max height 20em'; } }
+  @media (max-height: 10em) {
+    .crp-Media-max-height:after {
+      content: 'Max height 10em'; } }
+
+.crp-Media-orientation:after {
+  content: 'No orientation defined'; }
+  @media (orientation: portrait) {
+    .crp-Media-orientation:after {
+      content: 'Orientation: portrait'; } }
+  @media (orientation: landscape) {
+    .crp-Media-orientation:after {
+      content: 'Orientation: landscape'; } }
+
+.crp-Media-resolution:after {
+  content: 'Default resolution 1dppx'; }
+  @media (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
+    .crp-Media-resolution:after {
+      content: 'Resolution 1dppx'; } }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .crp-Media-resolution:after {
+      content: 'Resolution 1.5dppx'; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .crp-Media-resolution:after {
+      content: 'Resolution 2dppx'; } }
+
+.crp-Media-pixel-ratio:after {
+  content: 'Default pixel ratio'; }
+  @media (-webkit-min-device-pixel-ratio: 1), (-moz-min-device-pixel-ratio: 1), (-o-min-device-pixel-ratio: 2 / 2), (min-device-pixel-ratio: 1) {
+    .crp-Media-pixel-ratio:after {
+      content: 'Pixel ratio: 1'; } }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (-moz-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
+    .crp-Media-pixel-ratio:after {
+      content: 'Pixel ratio: 1.5'; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 4 / 2), (min-device-pixel-ratio: 2) {
+    .crp-Media-pixel-ratio:after {
+      content: 'Pixel ratio: 2'; } }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-moz-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
+  .crp-Media-highres-shortcut:after {
+    content: 'High res (shortcut)'; } }
+
+@media (max-width: 40em) {
+  body:after {
+    content: "small";
+    display: none; } }
+@media (min-width: 40em) {
+  body:after {
+    content: "medium";
+    display: none; } }
+@media (min-width: 60em) {
+  body:after {
+    content: "large";
+    display: none; } }
