@@ -1,3 +1,26 @@
+body:before {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: .4em 1em;
+  color: #fff;
+  background: rgba(255, 0, 0, 0.4);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+  border-radius: 0 3px 0 0;
+  content: "Screen XS"; }
+  @media (min-width: 30em) {
+    body:before {
+      content: "* Screen S *"; } }
+  @media (min-width: 50em) {
+    body:before {
+      content: "** Screen M **"; } }
+  @media (min-width: 65em) {
+    body:before {
+      content: "*** Screen L ***"; } }
+  @media (min-width: 80em) {
+    body:before {
+      content: "**** Screen XL ****"; } }
+
 div {
   font-size: 2em; }
 

@@ -21,13 +21,31 @@ Read more below to find alternative way to use this recipe.
 
 ## Component purpose
 
-**This recipe is available as Sass (scss) only.**
+**`/!\` This recipe is available as Sass (scss) only.**
 
 The component just give you some media queries shortcuts with some predefined size.
 
 ## Browser support
 
 _This component use [media queries](http://caniuse.com/#search=mediaqueries)._
+
+If you need to support IE < 9, you have 2 solutions:
+
+### Simple: Include a JavaScript polyfill
+
+[Respond.js](https://github.com/scottjehl/Respond) make is a fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more).
+Works like a charm for me.
+
+### Without JavaScript: Generate alternate stylesheets for IE < 9 only
+
+Use the 2 values below to create additionals "desktop" stylesheets (adjust values according to your needs).
+
+```scss
+$crp-Media-fix-width:  60em;
+$crp-Media-fix-height: 40em; // do you use mq for height, really ?
+```
+
+Checkout [this post](http://jakearchibald.github.com/sass-ie/) for original trick (embed in mixins below).
 
 ## Availables Sass mixin(s) shortcuts
 
@@ -37,6 +55,18 @@ _This component use [media queries](http://caniuse.com/#search=mediaqueries)._
 + `crp-Media-m()`
 + `crp-Media-l()`
 + `crp-Media-xl()`
+
+This mixins use the following predefined values.
+
+```scss
+$crp-Media-size-s: 30em !default;
+$crp-Media-size-m: 50em !default;
+$crp-Media-size-l: 65em !default;
+$crp-Media-size-xl: 80em !default;
+```
+
+This values where quickly found using `$crp-Media-debug` & the test page `index.html` on [responsinator.com](http://www.responsinator.com).
+To edit where the debug helper is added, use `$crp-Media-debugSelector` (default to `body:before`).
 
 _ProTip™ : It's recommanded to use them with a mobile first approch, that give you the ability to handle 'xs' screen (default) & add/edit CSS rules in mixin `@content`. See usage section for an example._
 
@@ -115,8 +145,9 @@ selector {
 
 ## Release History
 
- * 2013-09-06   v0.1.0   First release from CompassRecipes
+ * 2013-09-07   v0.1.1   Fix predefined media sizes & add debug helper + doc for IE fix.
+ * 2013-09-06   v0.1.0   First release from Compass Recipes
 
 ---
 
-Recipe submitted by [`MoOx` Maxime Thirouin](http://moox.io)
+Recipe submitted by ["MoOx" Maxime Thirouin](http://moox.io)
