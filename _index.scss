@@ -45,7 +45,7 @@ $crp-Media-size-xl: 80em !default;
             }
             @else
             {
-                @warn "#{error("crp-Media-fix need a min or a max for $query")}";
+                @warn "crp-Media-fix need a min or a max for $query";
             }
         }
     }

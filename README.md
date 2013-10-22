@@ -7,7 +7,7 @@
 If you haven't used [css-recipes](http://css-recipes.putaindecode.io/) before, be sure to check out the [Getting Started](http://css-recipes.putaindecode.io/getting-started) guide, as it explains consume the recipes using Bower. Once you're familiar with that process, you may install this recipe with this command:
 
 ```shell
-bower install css-recipe-media --save-dev
+bower install css-recipe-media --save
 ```
 
 Once the recipe has been installed (& assuming `bower_components` folder is in your Sass import paths), it may be enabled inside your Sass file with this line:
@@ -145,6 +145,7 @@ selector {
 
 ## Release History
 
+ * 2013-10-22   v0.1.2   libsass compatibility
  * 2013-09-07   v0.1.1   Fix predefined media sizes & add debug helper + doc for IE fix.
  * 2013-09-06   v0.1.0   First release from Compass Recipes
 
