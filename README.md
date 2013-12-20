@@ -132,7 +132,7 @@ selector {
     @include crp-Media-min-width(580px) {
         // custom rules
         
-        @include landscape {
+        @include crp-Media-landscape {
             // mediaCEPTION
         }
     }
